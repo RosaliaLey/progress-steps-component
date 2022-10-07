@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+:root {
+    --bodyBackground: #594E45;
+    --lineBorderEmpty: #F2CF8D;
+    --whiteBackground: #F2F2F2;
+    --titleColor: #1F2440;
+    --accentColor: #3B3F8C;
+    --muli: "Muli", Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--whiteBackground);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239f9ba6' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    height: 100vh;
+    margin: 0;
+
+    font-family: var(--muli);
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    color: var(--titleColor);
+}
+.sub-title {
+    font-size: 1rem;
+    color: var(--accentColor);
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background-color: var(--lineBorderEmpty);
+    height: 4px;
+    width: 100%;
+
+    z-index: -1;
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background-color: var(--accentColor);
+    height: 4px;
+    width: 0%;
+
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--whiteBackground);
+    height: 30px;
+    width: 30px;
+    border: 3px solid var(--lineBorderEmpty);
+
+    color: var(--circleFontColor);
+
+    border-radius: 50%;
+    transition: .4s ease;
+}
+
+.circle.active {
+    border-color: var(--accentColor);
+}
+
+.btn {
+    background-color: var(--accentColor);
+    border: 0;
+    padding: 8px 30px;
+    margin: 5px;
+
+    color: var(--whiteBackground);
+    font-family: inherit;
+    font-size: 1rem;
+
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:disabled {
+    background-color: var(--lineBorderEmpty);
+    
+    cursor: not-allowed;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3ca8b1c215.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Progress Steps</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="title">
+          <i class="fa-solid fa-cookie-bite"></i>The Cookie Bar
+        </h1>
+        <h2 class="sub-title">Make your dream cookie in 4 easy steps!</h2>
+        <div class="progress-container">
+          <!-- there will be nothing inside this div, it'll be for styling, for the line. -->
+          <div class="progress" id="progress"></div>
+          <div class="circle active">1</div>
+          <div class="circle">2</div>
+          <div class="circle">3</div>
+          <div class="circle">4</div>
+        </div>
+        <button class="btn" id="prev" disabled>Prev</button>
+        <button class="btn" id="next">Next</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
